@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Denem Grubu</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZZEK_FG_TESTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZZEK_FG_TEST</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZDENEME</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>deneme</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_PLATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR10</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_DATA</PARAMETER>
+       <DBSTRUCT>ZZEK_T_CARDATA</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_PLATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field Length = 10</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZZZEK_GET_SIPARIS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>deneme</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_MAX</PARAMETER>
+       <DEFAULT>0</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>I</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IR_VBELN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>RANGE_VBELN_VA_TAB</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_DATA</PARAMETER>
+       <DBSTRUCT>ZZEK_S_SIPB</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_MAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character Field Length = 10</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IR_VBELN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IS-M: Range Table for Sales Documents</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Siparis Baslik Structure</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

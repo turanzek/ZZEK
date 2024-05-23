@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZZEK_DOWNLOAD_EXCEL</NAME>
+    <SUBC>1</SUBC>
+    <RLOAD>T</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>T</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>S01</KEY>
+       <ENTRY>External Key</ENTRY>
+       <LENGTH>130</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S02</KEY>
+       <ENTRY>ID</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S03</KEY>
+       <ENTRY>Status</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S04</KEY>
+       <ENTRY>Sales Territory ID</ENTRY>
+       <LENGTH>85</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S05</KEY>
+       <ENTRY>Service Territory ID</ENTRY>
+       <LENGTH>82</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S06</KEY>
+       <ENTRY>Country/Region</ENTRY>
+       <LENGTH>90</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S07</KEY>
+       <ENTRY>State</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S08</KEY>
+       <ENTRY>County</ENTRY>
+       <LENGTH>23</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S09</KEY>
+       <ENTRY>District</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S10</KEY>
+       <ENTRY>Building</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S11</KEY>
+       <ENTRY>Floor</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S12</KEY>
+       <ENTRY>Room</ENTRY>
+       <LENGTH>19</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S13</KEY>
+       <ENTRY>House_Number</ENTRY>
+       <LENGTH>54</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S14</KEY>
+       <ENTRY>Additiona lHouse</ENTRY>
+       <LENGTH>64</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S15</KEY>
+       <ENTRY>Address Line 1</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S16</KEY>
+       <ENTRY>Address Line 2</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S17</KEY>
+       <ENTRY>Street</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S18</KEY>
+       <ENTRY>Address Line 4</ENTRY>
+       <LENGTH>58</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S19</KEY>
+       <ENTRY>Address Line 5</ENTRY>
+       <LENGTH>58</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S20</KEY>
+       <ENTRY>City</ENTRY>
+       <LENGTH>56</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S21</KEY>
+       <ENTRY>Different City</ENTRY>
+       <LENGTH>46</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S22</KEY>
+       <ENTRY>Postal Code</ENTRY>
+       <LENGTH>92</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S23</KEY>
+       <ENTRY>PO Box Postal Code</ENTRY>
+       <LENGTH>76</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S24</KEY>
+       <ENTRY>Company Postal Code</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S25</KEY>
+       <ENTRY>Tax Jurisdiction Code</ENTRY>
+       <LENGTH>90</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S26</KEY>
+       <ENTRY>Time Zone</ENTRY>
+       <LENGTH>44</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S27</KEY>
+       <ENTRY>Latitude</ENTRY>
+       <LENGTH>105</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S28</KEY>
+       <ENTRY>Longitude</ENTRY>
+       <LENGTH>105</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S29</KEY>
+       <ENTRY>Organisation Name First Line</ENTRY>
+       <LENGTH>105</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S30</KEY>
+       <ENTRY>Organisation Name Second Line</ENTRY>
+       <LENGTH>105</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S31</KEY>
+       <ENTRY>Organisation Name Third Line</ENTRY>
+       <LENGTH>116</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S32</KEY>
+       <ENTRY>Organisation Name Fourth Line</ENTRY>
+       <LENGTH>124</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S33</KEY>
+       <ENTRY>Form of Address Code</ENTRY>
+       <LENGTH>78</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S34</KEY>
+       <ENTRY>Customer Party ID</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S35</KEY>
+       <ENTRY>Customer Main Contact Party ID</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S36</KEY>
+       <ENTRY>Bill To Party ID</ENTRY>
+       <LENGTH>98</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S37</KEY>
+       <ENTRY>Bill To Main Contact Party ID</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S38</KEY>
+       <ENTRY>Owner Party ID</ENTRY>
+       <LENGTH>76</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S39</KEY>
+       <ENTRY>Owner Main Contact Party ID</ENTRY>
+       <LENGTH>114</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S40</KEY>
+       <ENTRY>ShipTo Party ID</ENTRY>
+       <LENGTH>86</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S41</KEY>
+       <ENTRY>ShipTo Main Contact Party ID</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S42</KEY>
+       <ENTRY>Payer Party ID</ENTRY>
+       <LENGTH>74</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S43</KEY>
+       <ENTRY>Payer Main Contact Party ID</ENTRY>
+       <LENGTH>112</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S44</KEY>
+       <ENTRY>EmployeeResponsible Party ID</ENTRY>
+       <LENGTH>110</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S45</KEY>
+       <ENTRY>Service Technician Party ID</ENTRY>
+       <LENGTH>110</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S46</KEY>
+       <ENTRY>Service Team Party ID</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S47</KEY>
+       <ENTRY>Responsible Planner Party ID</ENTRY>
+       <LENGTH>124</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S48</KEY>
+       <ENTRY>External Key</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S49</KEY>
+       <ENTRY>Installed Base ExternalKey</ENTRY>
+       <LENGTH>52</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S50</KEY>
+       <ENTRY>Installed Base ID</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S51</KEY>
+       <ENTRY>Language</ENTRY>
+       <LENGTH>18</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S52</KEY>
+       <ENTRY>Description</ENTRY>
+       <LENGTH>21</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S53</KEY>
+       <ENTRY>Party Role Code</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S54</KEY>
+       <ENTRY>Party ID</ENTRY>
+       <LENGTH>18</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>S55</KEY>
+       <ENTRY>Contact Party ID</ENTRY>
+       <LENGTH>26</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Download Excel Multiple Sheets</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

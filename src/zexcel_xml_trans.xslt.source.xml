@@ -1,0 +1,181 @@
+<!--***************************************************************************
+**************** Transformation ZEXCEL_XML_TRANS
+***************************************************************************
+* Description  : Make Xml For Excel file
+* Module       : HCM
+* Trans. code  :
+* Author       : Navneet Anand
+*Date & Time : 29.07.2019 17:55:35
+***************************************************************************
+* -->
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates">
+
+  <tt:root name="excelMeta"/>
+  <tt:root name="sheets"/>
+
+  <tt:template>
+    <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html=
+"http://www.w3.org/TR/REC-html40" tt:extensible="deep-static">
+
+      <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <Author>
+          <tt:value ref="excelMeta.DocumentProperties.Author"/>
+        </Author>
+      </DocumentProperties>
+
+      <tt:serialize>
+        <Styles>
+          <Style ss:ID="Default" ss:Name="Normal">
+    </Style>
+          <tt:loop name="Styles" ref=".excelMeta.Styles">
+            <Style>
+              <tt:attribute name="ss:ID" value-ref="$Styles.ID"/>
+
+              <Alignment>
+                <tt:cond check="not-initial($Styles.Alignment.Horizontal)">
+                  <tt:attribute name="ss:Horizontal" value-ref="$Styles.Alignment.Horizontal"/>
+                </tt:cond>
+                <tt:cond check="not-initial($Styles.Alignment.Vertical)">
+                  <tt:attribute name="ss:Vertical" value-ref="$Styles.Alignment.Vertical"/>
+                </tt:cond>
+                <tt:cond check="not-initial($Styles.Alignment.WrapText)">
+                  <tt:attribute name="ss:WrapText" value-ref="$Styles.Alignment.WrapText"/>
+                </tt:cond>
+              </Alignment>
+
+              <Borders>
+                <Border ss:Position="Bottom" >
+                     <tt:cond check="not-initial($Styles.border.weight)">
+                          <tt:attribute name="ss:Weight" value-ref="$Styles.border.weight"/>
+                     </tt:cond>
+                     <tt:cond check="not-initial($Styles.border.linestyle.Bottom)">
+                          <tt:attribute name="ss:LineStyle" value-ref="$Styles.border.linestyle.Bottom"/>
+                     </tt:cond>
+                    <tt:cond check="not-initial($Styles.border.Color.Bottom)">
+                          <tt:attribute name="ss:Color" value-ref="$Styles.border.Color.Bottom"/>
+                     </tt:cond>
+                 </Border>
+                 <Border ss:Position="Top" >
+                     <tt:cond check="not-initial($Styles.border.weight)">
+                          <tt:attribute name="ss:Weight" value-ref="$Styles.border.weight"/>
+                     </tt:cond>
+                     <tt:cond check="not-initial($Styles.border.linestyle.Top)">
+                          <tt:attribute name="ss:LineStyle" value-ref="$Styles.border.linestyle.Top"/>
+                     </tt:cond>
+                    <tt:cond check="not-initial($Styles.border.Color.Top)">
+                          <tt:attribute name="ss:Color" value-ref="$Styles.border.Color.Top"/>
+                     </tt:cond>
+                 </Border>
+                 <Border ss:Position="Left" >
+                     <tt:cond check="not-initial($Styles.border.weight)">
+                          <tt:attribute name="ss:Weight" value-ref="$Styles.border.weight"/>
+                     </tt:cond>
+                     <tt:cond check="not-initial($Styles.border.linestyle.Left)">
+                          <tt:attribute name="ss:LineStyle" value-ref="$Styles.border.linestyle.Left"/>
+                     </tt:cond>
+                    <tt:cond check="not-initial($Styles.border.Color.left)">
+                          <tt:attribute name="ss:Color" value-ref="$Styles.border.Color.left"/>
+                     </tt:cond>
+                 </Border>
+               <Border ss:Position="Right" >
+                     <tt:cond check="not-initial($Styles.border.weight)">
+                          <tt:attribute name="ss:Weight" value-ref="$Styles.border.weight"/>
+                     </tt:cond>
+                     <tt:cond check="not-initial($Styles.border.linestyle.Right)">
+                          <tt:attribute name="ss:LineStyle" value-ref="$Styles.border.linestyle.Right"/>
+                     </tt:cond>
+                    <tt:cond check="not-initial($Styles.border.Color.Right)">
+                          <tt:attribute name="ss:Color" value-ref="$Styles.border.Color.Right"/>
+                     </tt:cond>
+                 </Border>
+
+              </Borders>
+
+              <Font>
+                  <tt:cond check="not-initial($Styles.Font.fontname)">
+                          <tt:attribute name="ss:FontName" value-ref="$Styles.Font.fontname"/>
+                   </tt:cond>
+                  <tt:cond check="not-initial($Styles.Font.Family)">
+                          <tt:attribute name="x:Family" value-ref="$Styles.Font.Family"/>
+                   </tt:cond>
+                    <tt:cond check="not-initial($Styles.Font.Color)">
+                          <tt:attribute name="ss:Color" value-ref="$Styles.Font.Color"/>
+                   </tt:cond>
+                   <tt:cond check="not-initial($Styles.Font.Bold)">
+                           <tt:attribute name="ss:Bold" value-ref="$Styles.Font.Bold"/>
+                   </tt:cond>
+                    <tt:cond check="not-initial($Styles.Font.Italic)">
+                            <tt:attribute name="ss:Italic" value-ref="$Styles.Font.Italic"/>
+                   </tt:cond>
+                    <tt:cond check="not-initial($Styles.Font.Underline)">
+                            <tt:attribute name="ss:Underline" value-ref="$Styles.Font.Underline"/>
+                   </tt:cond>
+                   <tt:cond check="not-initial($Styles.Font.Font_Size)">
+                            <tt:attribute name="ss:Size" value-ref="$Styles.Font.Font_Size"/>
+                   </tt:cond>
+
+              </Font>
+
+              <Interior>
+
+                <tt:cond check="not-initial($Styles.Interior.Colorindex)">
+                            <tt:attribute name="ss:Color" value-ref="$Styles.Interior.Colorindex"/>
+                </tt:cond>
+                <tt:cond check="not-initial($Styles.Interior.Pattern)">
+                            <tt:attribute name="ss:Pattern" value-ref="$Styles.Interior.Pattern"/>
+                </tt:cond>
+                <tt:cond check="not-initial($Styles.Interior.patterncolorindex)">
+                            <tt:attribute name="ss:PatternColor" value-ref="$Styles.Interior.patterncolorindex"/>
+                </tt:cond>
+
+              </Interior>
+
+            </Style>
+          </tt:loop>
+        </Styles>
+      </tt:serialize>
+
+
+
+      <tt:loop name="sheet" ref=".sheets">
+
+        <Worksheet>
+          <tt:attribute name="ss:Name" value-ref="$sheet.Sheetname"/>
+
+          <Table>
+            <tt:cond check="not-initial($sheet.ColWidth)">
+               <tt:loop name="ColWidth" ref="$sheet.ColWidth">
+                  <Column>
+                              <tt:attribute name="ss:Index" value-ref="$ColWidth.Col_index"/>
+                              <tt:attribute name="ss:Width" value-ref="$ColWidth.Col_width"/>
+                  </Column>
+               </tt:loop>
+            </tt:cond>
+
+            <tt:loop name="line" ref="$sheet.sheetx">
+              <Row>
+               <tt:cond check="not-initial($line.RowHight)">
+                      <tt:attribute name="ss:Height" value-ref="$line.RowHight"/>
+                 </tt:cond>
+                <tt:loop name="Cell" ref="$line.Cells">
+                  <Cell>
+                    <tt:cond>
+                      <tt:attribute name="ss:StyleID" value-ref="$Cell.StyleID"/>
+                    </tt:cond>
+                    <tt:cond>
+                      <Data>
+                        <tt:attribute name="ss:Type" value-ref="$Cell.Type"/>
+                        <tt:value ref="$Cell.cell_content"/>
+                      </Data>
+                    </tt:cond>
+                  </Cell>
+                </tt:loop>
+              </Row>
+            </tt:loop>
+          </Table>
+        </Worksheet>
+      </tt:loop>
+    </Workbook>
+  </tt:template>
+</tt:transform>
